@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     html{
+        background: #414141;
+        font-family: monospace;
+        text-transform: capitalize;
+        color: white;
+        font-size: 20px;
+    }
+    button{
+        background-color: aqua;
+        border: 5px solid green;
+        width: fit-content;
+        height: 10vh;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+    button:hover{
+        background-color: red;
+    }
+    hr{
+      border: dotted  salmon;
+    }
+</style>
+<body>
+    <div id="container">
+        <form>
+            <p><label>give number:</label>
+               <input type="text" id="input"></p>
+            <p><button>Palindrome</button></p>
+        </form>
+    </div>  
+</body>
+<script>
+const form = document.querySelector('form')
+console.log(form);
+
+form.addEventListener('submit', function(e){
+  e.preventDefault()
+
+  let num = parseInt(document.querySelector('#input').value)
+  console.log(num)
+  let num1 = 0;
+    let num2 = 1;
+    let sum = num1 + num2;
+    e.innerHTML = alert(`${num1},`);
+
+   while(sum < num ){
+
+   e.innerHTML = alert(`${sum},`); 
+    sum = num1+num2;
+    num1=num2;
+    num2=sum;
+}
+//e.innerHTML = alert(`${num1}, ${num2} ,${sum},`);
+})
+</script>
+</html>

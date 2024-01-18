@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/10726308f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body onload="generate()">
+        <div class="container">
+            <h2>please enter the details</h2>
+           <form>
+                <p id="pj"><label>name : </label>
+                    <input type="text" 
+                           placeholder="name" 
+                           id="name">
+                </p>
+                <br/>
+                <p id="pj"><label>city : </label>
+                    <input type="text" 
+                           placeholder="city"
+                           id="city">
+                </p>
+                <br/>
+                <p id="pj"><label>mobile number : </label>
+                    <input type="text" 
+                           placeholder="number" 
+                           id="number">
+                </p>
+                <br/>
+                <p id="pj"><label>e-mail : </label>
+                    <input type="email" 
+                           placeholder="email" 
+                           id="email">
+                </p>
+                <br/>
+                <!-- //////for captcha generate/// -->
+                <p id="pj"><label>fill the captach: </label>
+                    <span id="cap">
+                    <input type="text" 
+                           id="submit" 
+                           placeholder="Captcha code"/>
+                </p>
+ 
+                <div class="regenrate"
+                    id="reg">
+                    <i class="fas fa-sync"></i>
+                </div>
+                <div id="image"></div>     
+                <br/>  <br/>              
+                <button>Submit</button>
+
+               <div id="result">
+               </div>
+           </form>
+        </div>
+</body>
+<script src="cptch.js"></script>
+</html>

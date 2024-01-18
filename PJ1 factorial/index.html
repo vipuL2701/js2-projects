@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html{
+        background: #414141;
+        font-family: monospace;
+        text-transform: capitalize;
+        color: white;
+        font-size: 20px;
+    }
+    #container{
+        margin: auto;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px; 
+    }
+    button{
+        background-color: aqua;
+        border: 5px solid green;
+        width: fit-content;
+        height: 10vh;
+        font-size: 20px;
+        border-radius: 20px;
+    }
+    button:hover{
+        background-color: red;
+    }
+    hr{
+      border: dotted  salmon;
+    }
+    input{
+        margin-top: 20px;
+        font-size: 25px;
+        width: 50vh;
+    }
+</style>
+<body>
+    <div id="container">
+            <p><button type="button" id="clickme">CLICK ME FOR ALERT</button></p><br><hr>
+        <form>
+            <p><label>give number:</label>
+               <input type="text" id="input"></p>
+            <p><button>Factorial</button></p>
+        </form>
+      
+    </div>
+</body>
+<script src="scpt.js"></script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <form>
+            <p><label>give number:</label>
+               <input type="text" id="input"></p>
+            <p><button>Palindrome</button></p>
+        </form>
+</body>
+<script>
+let form = document.querySelector('form')
+
+form,addEventListener('submit', function(e){
+ e.preventDefault()
+
+let number = parseInt(document.querySelector('#input').value)
+var copy = number;
+var count = 0;
+var r;
+var sum = 0;
+
+while(copy>0)
+{
+  count++;
+  copy= parseInt(copy/10);    
+}
+copy = number;
+while (copy>0){
+r= copy%10;
+sum =sum + Math.pow( r, count);
+copy=parseInt(copy/10);
+}
+if(sum == number) 
+{
+    e.innerHTML = alert(`${number}, is an Armstrong Number`);
+}
+else{
+   e.innerHTML = alert(`${number}, is not an Armstrong Number`);
+}
+
+})
+</script>
+</html>
