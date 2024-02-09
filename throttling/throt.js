@@ -10,11 +10,10 @@ function throttle(func, delay) {
   };
 }
 
-function handleInput(event) {
-  console.log("Input value:", event.target.value);
+function handleScroll() {
+  console.log("Scrolled");
 }
 
-const throttledHandleInput = throttle(handleInput, 500);
+const throttledHandleScroll = throttle(handleScroll, 5000);
 
-const inputElement = document.getElementById("inputElement");
-inputElement.addEventListener("input", throttledHandleInput);
+window.addEventListener("scroll", throttledHandleScroll);

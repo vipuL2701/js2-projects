@@ -1,0 +1,26 @@
+LoginPage Component:
+
+This component represents the login form.
+It utilizes the useState hook to manage the state of username, password, and error.
+The handleLogin function is triggered when the form is submitted.
+Within handleLogin, it retrieves the stored user data from localStorage using JSON.parse(localStorage.getItem('user')). This is for demonstration purposes only and is not secure in a real-world scenario.
+It checks if the entered username and password match the stored user data. If they match, it calls the onLogin function with the username to update the currentUser state in the parent component (App). If not, it sets an error message.
+The JSX renders a form with input fields for username and password, and a submit button. It also displays the error message if there's any.
+SignupPage Component:
+This component represents the signup form.
+Similar to LoginPage, it utilizes the useState hook to manage the state of username, password, confirmPassword, and error.
+The handleSignup function is triggered when the form is submitted.
+Within handleSignup, it checks if the entered password matches the confirmed password. If they match, it stores the user data in localStorage (for demonstration purposes only) and calls the onSignup function with the username to update the currentUser state in the parent component (App). If not, it sets an error message.
+The JSX renders a form with input fields for username, password, confirmed password, and a submit button. It also displays the error message if there's any.
+App Component:
+This is the main component that manages the overall application state.
+It utilizes the useState hook to manage the state of currentUser.
+It defines functions handleSignup, handleLogin, and handleSignout to handle user signup, login, and signout actions, respectively.
+Based on the currentUser state, it either renders a welcome message with a signout button or renders the login and signup forms using the LoginPage and SignupPage components.
+When the user successfully signs up or logs in, it updates the currentUser state with the username.
+Overall, this React code demonstrates how to create a simple authentication flow with signup, login, and signout functionality using React hooks (useState) and local storage for storing user data (not secure for production use). It separates the login and signup forms into separate components for better code organization and reusability.
+
+
+
+
+
