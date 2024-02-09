@@ -19,8 +19,3 @@ It defines functions handleSignup, handleLogin, and handleSignout to handle user
 Based on the currentUser state, it either renders a welcome message with a signout button or renders the login and signup forms using the LoginPage and SignupPage components.
 When the user successfully signs up or logs in, it updates the currentUser state with the username.
 Overall, this React code demonstrates how to create a simple authentication flow with signup, login, and signout functionality using React hooks (useState) and local storage for storing user data (not secure for production use). It separates the login and signup forms into separate components for better code organization and reusability.
-
-
-
-
-
